@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const criandoH1 = document.createElement('h1');
+      criandoH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+      document.body.appendChild(criandoH1);
+
+      const criandoDivMain = document.createElement('div');
+      criandoDivMain.className = 'main-content';
+      document.body.appendChild(criandoDivMain);
+
+      const criandoDivCenter = document.createElement('div');
+      criandoDivCenter.className = 'center-content';
+      criandoDivMain.appendChild(criandoDivCenter);
+
+      const criandoP = document.createElement('p');
+      criandoP.innerHTML = 'dereguejhonson do deregueflex';
+      criandoDivCenter.appendChild(criandoP);
+
+      const divLeft = document.createElement('div');
+      divLeft.className = 'left-content';
+      criandoDivMain.appendChild(divLeft);
+
+      const divRight = document.createElement('p');
+      divRight.className = 'right-content';
+      criandoDivMain.appendChild(divRight);
+
+      const elementImg = document.createElement('img');
+      elementImg.className = 'small-image';
+      elementImg.src = 'https://picsum.photos/200 ';
+      divLeft.appendChild(elementImg);
+
+      const elementLista = document.createElement('ul');
+      divRight.appendChild(elementLista);
+      const arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+        'Sete', 'Oito', 'Nove', 'Dez']
+        for (let key in arrayNumbers){
+          const elementLi = document.createElement('li');
+          elementLi.innerText = arrayNumbers[key];
+          elementLista.appendChild(elementLista);
+        }
+
+        for (let index = 1; index <= 3; index += 1) {
+        const elementH3 = document.createElement('h3');
+        elementH3.innerHTML = 'até quando brasil ' + index;
+        criandoDivMain.appendChild(elementH3);
+        }
+        const title = document.getElementsByTagName('h1')[0];
+        title.className = 'title';
+        
+        const elementosH3 = document.getElementsByTagName('h3');
+        for (let index = 1; index <= 3; index += 1){
+          elementosH3[index].className = 'description';
+        }
+
+        const divLeftContent = document.getElementsByClassName('left-content')[0];
+        criandoDivMain.removeChild(divLeftContent);
+
+
+      const divRightContent = document.getElementsByClassName('right-content')[0];
+      divRightContent.style.marginRight='auto';
+      
+       const divCenterContent = document.getElementsByClassName('center-content')[0];
+      divCenterContent.parentNode.style.backgroundColor = 'green';
+
+      elementLista.lastChild.remove();
+      elementLista.lastChild.remove();
+    </script>
+  </body>
+</html>

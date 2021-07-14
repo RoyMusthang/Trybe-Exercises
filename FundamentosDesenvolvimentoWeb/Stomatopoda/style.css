@@ -1,0 +1,24 @@
+body {
+  background-color: cadetblue;
+}
+header {
+  text-align: center;
+  background-color: bisque;
+}
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px;
+  text-align: center;
+}
+nav{
+  background-color: burlywood;
+  text-align: center;
+}
+img {
+  height: 400px;
+}
+footer {
+  background-color: burlywood;
+}

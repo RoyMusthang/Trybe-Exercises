@@ -1,0 +1,23 @@
+*parte 1
+
+tudo que fica em <style></style> é considerado estilos
+pra ter uma cor exata usei "rgb(numeroDoVerde, numeroDoVermelho, numeroDoAzul)"
+pra motificar somente algo use um id único que é vai ser identificado pelo #oIDsetado
+pra motificar um conjunto use um classe único que vai identificado pelo .claseSetada
+
+*parte 2
+
+background-color = muda a cor de fundo
+color = cor das letras
+font-size = muda o tamanho da fonte
+font-family = muda a fonte (arial por exemplo)
+font-weight: bold = deixa em negrito
+font-style: italic = deixa em italico
+line-height = muda o espaçamento entre as linhas
+text-align = muda o alinhamento do texto
+text-decoration: underline = deixa o texto sublinhado
+
+*parte 3
+
+dentro do head use o <link rel="styleheet" type="text/css" href="style.css">
+para linkar o css ao seu html

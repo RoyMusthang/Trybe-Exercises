@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+<body>
+  <form action="" method="GET">
+    <fieldset>
+      <label for="usuario">Digite seu nome:</label>
+        <input type="text" name="name" id="usuario" maxlength="40" required>
+      <br>
+      <label for="e-mail">Digite seu E-mail:</label>
+        <input type="email" name="e-mail" id="e-mail" maxlength="50">
+      <br>
+      <label for="cpf-usr">Digite seu CPF:</label>
+        <input type="text" id="cpf-usr" name="cpf" maxlength="11">
+      <br>
+      <label for="end">Digite seu endereço:</label>
+        <input type="text" name="endereço" id="end" maxlength="200">
+      <br>
+      <label for="city">Digite sua cidade:</label>
+        <input type="text" name="cidade" id="city" maxlength="28">
+      <br>
+      <label for="select-estado">Selecione seu estado:</label>
+        <select name="estado" id="select-estado" required>        
+        </select>
+      <br>
+      <label for="tipoCasa">Casa</label>
+      <input type="radio" id="tipoCasa" name="imovel" value="casa" required> 
+      <label for="tipoCasa">Apartamento</label>
+      <input type="radio" id="tipoCasa" name="imovel" value="apartamento" required>
+    </fieldset>
+    <fieldset>
+      <label for="resum">Resumo do currículo:</label>
+      <br>
+      <textarea name="resumo" id="resum" cols="30" rows="10" maxlength="1000" required></textarea>
+      <br>
+      <label for="cargo">Cargo:</label>
+      <input type="text" id="cargo" name="cargo" maxlength="40" required>
+      <br>
+      <label for="des-cargo">Descriçao do cargo:</label>
+      <input type="text" maxlength="500" required id="des-cargo" name="descricao">
+      <br>
+      <label for="dataStart">Data de Inicío:</label>
+      <input type="date" name="data" id="dataStart" required>
+    </fieldset>
+    <button class="btn-submit">Enviar</button>
+    <button class="btn-clear">Limpar</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

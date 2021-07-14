@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        /*
+        
+ Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        */
+        
+        function changeText() {
+          let paragraph = document.getElementsByTagName('p')[1];
+          paragraph.innerHTML = "Ganhar 3.500 e estar em um empresa cabulosa!!"
+        }
+        changeText();
+
+        function TiraAmarelo() {
+          let cor = document.getElementsByClassName('main-content')[0];
+          cor.style.background = 'rgb(76,164,109)';
+        }
+        TiraAmarelo();
+
+        function tiraVermelho() {
+          let cor = document.getElementsByClassName('center-content')[0];
+          cor.style.background = 'white'
+        }
+        tiraVermelho();
+
+        function corrigeH1() {
+          let titulo = document.getElementsByTagName('h1')[0];
+          titulo.innerText = "Exercício 5.1 - JavaScript"
+        }
+        corrigeH1();
+
+        function maiusculo (){
+          let paragraph = document.getElementsByTagName('p')[0];
+          paragraph.innerHTML = paragraph.innerHTML.toLocaleUpperCase();
+        }
+        maiusculo();
+
+        function imprime(){
+          let paragraph = document.getElementsByTagName('p');
+          for (let index in paragraph){
+            console.log(paragraph[index].innerHTML)
+          }
+        }
+        imprime();
+    </script>;
+  </body>
+</html>

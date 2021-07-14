@@ -1,0 +1,12 @@
+.textos{
+  text-align: center;
+}
+li:hover {
+  background-color: lavender;
+}
+li:active {
+  color: white;
+}
+ul, ol{
+  list-style: none
+}
