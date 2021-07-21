@@ -78,10 +78,10 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
-##### Bloco 11:
-- [ ] 11.1 - Introdução - Front-end
-- [ ] 11.1 - Introdução - React
-- [ ] 11.1 - 'Hello, world!' no React!
+##### Bloco 11: [Introdução à React](https://github.com/RoyMusthang/Trybe-Exercises/tree/main/DesenvolvimentoFrontEnd/bloco_11)
+- [x] 11.1 - Introdução - Front-end
+- [x] 11.1 - Introdução - React
+- [x] 11.1 - 'Hello, world!' no React!
 - [ ] 11.2 - Componentes React
 - [ ] 11.3 - Projeto - Movie Cards Library
 
