@@ -9,7 +9,6 @@ const Task = (value) => {
 }
 
 const tarefas = ['Acordar', 'Tomar café', 'Escovar os dentes', 'Ir trabalhar'];
-
 class App extends React.Component {
   render() {
     return (
