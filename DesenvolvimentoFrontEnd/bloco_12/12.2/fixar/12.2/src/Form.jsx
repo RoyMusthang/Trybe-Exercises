@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Personal from './Personal'
 
 class Form extends Component {
   constructor() {
@@ -8,85 +9,63 @@ class Form extends Component {
       email: '', // estado padrão do email.
       usuario: '', // estado padrão do nome
       textArea: 'observações aqui', // estado padrão do text area
+      age: '', // estado padrão da idade
+      terms: false, // estado dos termos de usuario
     };
 
-    this.handleChangeName = this.handleChangeName.bind(this); // sintaxe do bind para que as funções sejam vistas pelo react
-    this.handleChangeEmail = this.handleChangeEmail.bind(this);
-    this.handleChangeTextArea = this.handleChangeTextArea.bind(this);
+    this.handleChange = this.handleChange.bind(this); // sintaxe do bind para que as funções sejam vistas pelo react
   }
 
-  handleChangeName(event) { // função que muda o Nome
+  handleChange({ target }) { // agora temos apenas uma função controladora com essa sintaxe padrão
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+  
     this.setState({
-      usuario: event.target.value,
-    });
-  }
-
-  handleChangeEmail(event) { // função que muda o email
-    this.setState({
-      email: event.target.value,
-    });
-  }
-
-  handleChangeTextArea(event){ // função que muda o text area
-    this.setState({
-      textArea: event.target.value,
+      [name]: value,
     });
   }
 
   render() {
-    const { email, usuario, textArea } = this.state; // setando os estados dentro do render
+    const { email, usuario, textArea, age, terms } = this.state; // setando os estados dentro do render
 
     return (
-      <div>
-        <h1>formulario</h1>
+      <>
         <form className="form">
-          <label htmlFor="name">
-            Nome:
-            <input
-              id="name"
-              name="name"
-              type="text"
-              onChange={ this.handleChangeName }
-              value={ usuario }
-            />
-          </label>
-
-          <label htmlFor="email">
-            Email:
-            <input
-              id="email"
-              name="email"
-              type="email"
-              onChange={ this.handleChangeEmail }
-              value={ email }
-            />
-          </label>
-
-          <label htmlFor="age">
-            Idade:
-            <select
-              id="age"
-              name="age"
-              defaultValue=""
-            >
-              <option value="">Selecione</option>
-              <option value="adult">Maior que 18</option>
-              <option value="underage">Menor que 18</option>
-            </select>
-          </label>
-
-          <label htmlFor="textArea">
-            Notação:
-            <textarea
-              id="textArea"
-              name="textArea"
-              onChange={this.handleChangeTextArea}
-              value={textArea}
-            />
-          </label>
-
+          <h1>formulario</h1>
+          <Personal
+            nameValue={ usuario }
+            emailValue={ email }
+            ageValue={ age }
+            handleChange={ this.handleChange }
+          />
+          <fieldset>
+            <legend>informações adicionais</legend>
+              <label htmlFor="textArea">
+                Notação:
+                <textarea
+                  id="textArea"
+                  name="textArea"
+                  onChange={this.handleChange}
+                  value={textArea}
+                  />
+              </label>
+              <label htmlFor="terms">
+                <input
+                  id="terms"
+                  type="checkbox"
+                  name="terms"
+                  onChange={this.handleChange}
+                  value={terms}
+                  />
+                Concordo com termos e acordos
+              </label>
+              <label htmlFor="">
+                arquivo adicional
+                <input type="file" />
+              </label>
+            </fieldset>
         </form>
-      </div>
+      </>
     );
   }
 }
