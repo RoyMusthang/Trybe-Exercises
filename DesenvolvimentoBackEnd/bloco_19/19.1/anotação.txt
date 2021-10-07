@@ -1,0 +1,3 @@
+- query: Nome dado aos comandos que você digita em uma janela ou linha de comando
+
+- SQL: 
