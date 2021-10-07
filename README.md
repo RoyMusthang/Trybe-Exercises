@@ -82,7 +82,7 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 11.1 - Introdução - Front-end
 - [x] 11.1 - Introdução - React
 - [x] 11.1 - 'Hello, world!' no React!
-- [ ] 11.2 - Componentes React
+- [x] 11.2 - Componentes React
 - [ ] 11.3 - Projeto - Movie Cards Library
 
 ##### Bloco 12:
