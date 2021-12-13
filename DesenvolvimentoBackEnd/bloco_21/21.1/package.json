@@ -1,5 +1,18 @@
 {
   "dependencies": {
     "readline-sync": "^1.4.10"
-  }
+  },
+  "name": "21.1",
+  "version": "1.0.0",
+  "description": "scripts basicos",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "velocidade": "node velocidade.js",
+    "sorteio": "node sorteio.js",
+    "imc": "node imc.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josué Lobo",
+  "license": "ISC"
 }
