@@ -5,20 +5,21 @@ function readFiles(a, b, c) {
     }
     const calc = (a + b) * c
     if (calc < 50) {
-      return reject('Numeros muito baixos')
+      return reject('Numeros muito baixos');
     }
     return resolve;
   })
 }
 
-readFiles(110, 10, 10)
-  .then(resolve => console.log(resolve))
-  .catch(error => console.log(error))
 
-// readFiles(1, 1, 'a')
-//   .then(resolve => console.log(resolve))
-//   .catch(error => console.log(error))
-//
-// readFiles(1, 1, 1)
-//   .then(resolve => console.log(resolve))
-//   .catch(error => console.log(error))
+function numberRamdom() {
+  const one = Math.floor(Math.random() * 100 + 1);
+  const two = Math.floor(Math.random() * 100 + 1);
+  const three = Math.floor(Math.random() * 100 + 1);
+
+  readFiles(one, two, three)
+    .then(result => console.log(result))
+    .catch(err => console.log(err));
+};
+
+console.log(numberRamdom());
