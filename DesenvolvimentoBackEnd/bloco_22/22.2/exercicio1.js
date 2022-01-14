@@ -3,23 +3,26 @@ function readFiles(a, b, c) {
     if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number'){
       reject('Informe apenas números');
     }
-    const calc = (a + b) * c
+    const calc = (a + b) * c;
     if (calc < 50) {
       return reject('Numeros muito baixos');
     }
-    return resolve;
-  })
+    resolve(calc);
+  });
 }
 
 
-function numberRamdom() {
+async function numberRamdom() {
   const one = Math.floor(Math.random() * 100 + 1);
   const two = Math.floor(Math.random() * 100 + 1);
   const three = Math.floor(Math.random() * 100 + 1);
 
-  readFiles(one, two, three)
-    .then(result => console.log(result))
-    .catch(err => console.log(err));
+  try {
+    const result = await readFiles(one, two, three)
+    console.log(result)
+  } catch (err) {
+    console.log(err)
+  }
 };
 
-console.log(numberRamdom());
+numberRamdom();
